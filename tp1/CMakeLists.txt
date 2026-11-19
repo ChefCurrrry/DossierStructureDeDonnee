@@ -9,4 +9,8 @@ add_executable(tp1 main.c
         slist.h
         slist_ht.h
         slist_ht.c
+        Pile.h
+        Pile.c
+        Queue.c
+        Queue.h
 )

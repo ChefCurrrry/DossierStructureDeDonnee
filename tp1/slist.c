@@ -122,14 +122,14 @@ int ds_slist_remove_tail(SList *list, int *out) {
 
 int ds_slist_remove_head(SList *list, int *out) {
     if (ds_slist_is_empty(list)) {
-        fprintf(stderr,"ds_slist_remove_tail: La liste est vide rien à supprimer. \n");
         return 0;
     }
     SNode * aSupprimer = list->head;
     list->head = aSupprimer->next;
-    *out = aSupprimer->data;
+    if (out) {
+        *out = aSupprimer->data;
+    }
     free(aSupprimer);
-    printf("La valeur de tête %d à été supprimée. \n", *out);
     return 1;
 }
 

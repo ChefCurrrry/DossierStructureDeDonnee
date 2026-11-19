@@ -11,7 +11,7 @@ typedef struct SList_HT {
     SNode *tail;
 }SList_HT;
 
-SNode * ds_slist_ht_create_node(int data);
+
 SList_HT ds_slist_ht_create();
 void ds_slist_ht_init(SList_HT *plist);
 int ds_slist_ht_is_empty(const SList_HT  *plist);
